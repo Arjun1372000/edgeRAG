@@ -1,0 +1,17 @@
+Title: Handling Torque Spikes and Motor Overstrain
+Applies To: Primary Drive Motors
+Symptoms:
+
+Sudden spikes in Torque (exceeding 60 Nm) combined with elevated Tool Wear.
+
+Rotational speed drops sharply despite constant power delivery.
+Root Cause: Tool binding in the workpiece or attempting to process material that exceeds the machine's density specifications.
+Immediate Mitigation Steps:
+
+Trigger an immediate hard stop of the rotational drive to prevent motor winding burnout.
+
+Do not attempt to reverse the motor electronically under load.
+
+Manually release the tension on the workpiece using the mechanical override lever.
+
+Verify the material density matches the batch specifications before restarting.

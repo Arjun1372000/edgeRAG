@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge RAG Failure Mitigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="top-bar">
+            <div class="title-section">
+                <h1>Edge-Optimized RAG Operator Copilot</h1>
+                <p>Assembly Line Monitoring & Localized Mitigation</p>
+            </div>
+            <div class="status-bar">
+                <span class="badge status-active">● Edge CPU Inference Active</span>
+                <span class="badge">Model: Phi-3-Mini (GGUF)</span>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Left Panel: AI4I Sensor Telemetry -->
+            <section class="panel telemetry-panel">
+                <h2>Live Sensor Feed</h2>
+                <div class="sensor-grid">
+                    <div class="sensor-card">
+                        <span class="label">Air Temperature</span>
+                        <span class="value" id="val-air">298.1 K</span>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="label">Process Temperature</span>
+                        <span class="value" id="val-process">308.6 K</span>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="label">Rotational Speed</span>
+                        <span class="value" id="val-rpm">1551 RPM</span>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="label">Torque</span>
+                        <span class="value alert-text" id="val-torque">65.2 Nm</span>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="label">Tool Wear</span>
+                        <span class="value" id="val-wear">198 min</span>
+                    </div>
+                </div>
+
+                <!-- ML Diagnostic Output -->
+                <div class="diagnostic-box status-faulty mt-20">
+                    <h3>Machine Diagnosis: <span class="alert-text">FAILURE DETECTED</span></h3>
+                    <p><strong>Predicted Mode:</strong> OSF (Overstrain Failure)</p>
+                    <p><strong>Confidence:</strong> 94.2% (XGBoost)</p>
+                </div>
+            </section>
+
+            <!-- Right Panel: SLM / RAG Output -->
+            <section class="panel rag-panel">
+                <h2>RAG Mitigation Assistant</h2>
+                <div class="rag-chat-window">
+                    <div class="chat-message system">
+                        <strong>System Trigger:</strong> OSF Failure detected at Station 4. Querying vector database for mitigation protocols...
+                    </div>
+                    
+                    <div class="chat-message agent">
+                        <strong>Edge SLM (Streaming):</strong><br>
+                        <span id="rag-stream"></span><span class="cursor">|</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Acknowledge & Shut Down</button>
+                    <button class="btn btn-secondary">Request Maintenance Team</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script to simulate the SLM typing out a response -->
+    <script>
+        const ragResponse = "Based on the retrieved operational manual, an Overstrain Failure (OSF) coupled with a torque spike of 65.2 Nm indicates severe tool binding. \n\nRecommended Local Mitigation:\n1. Immediately halt the rotational drive to prevent motor burnout.\n2. Do not attempt to reverse the spindle.\n3. Manually release the tension chuck before replacing the tool bit.";
+        let charIndex = 0;
+        
+        function typeWriter() {
+            if (charIndex < ragResponse.length) {
+                document.getElementById("rag-stream").innerHTML += ragResponse.charAt(charIndex) === '\n' ? '<br>' : ragResponse.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeWriter, 15); // Simulates fast local SLM token streaming
+            }
+        }
+        
+        // Start the RAG streaming simulation after a short delay
+        setTimeout(typeWriter, 1000);
+    </script>
+</body>
+</html>

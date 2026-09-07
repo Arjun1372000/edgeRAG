@@ -1,0 +1,17 @@
+Title: Mitigation Protocol for Heat Dissipation Anomalies
+Applies To: CNC Milling and Assembly Motors
+Symptoms:
+
+Air Temperature and Process Temperature differential falls below critical thresholds.
+
+Sustained Process Temperature exceeding 310 K.
+Root Cause: Failure of the internal liquid cooling system or blocked ventilation fans, leading to thermal expansion and motor stall.
+Immediate Mitigation Steps:
+
+Do not power down immediately; reduce rotational speed to idle (below 1000 RPM) to allow residual cooling.
+
+Engage the secondary backup coolant pump manually.
+
+Check the thermal exhaust vents for physical blockages.
+
+If Process Temperature does not drop within 2 minutes, trigger an emergency electrical disconnect.

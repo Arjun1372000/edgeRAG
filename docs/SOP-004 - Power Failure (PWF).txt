@@ -1,0 +1,15 @@
+Title: Power Delivery and Voltage Anomaly Protocols
+Applies To: Factory Electrical Grid and Machine Power Supplies
+Symptoms:
+
+The product of Torque and Rotational Speed (Power) drops below 3500 W or spikes critically above 9000 W.
+Root Cause: Phase loss in the main factory power supply, blown inverter fuses, or motor short circuits.
+Immediate Mitigation Steps:
+
+Step away from the machine casing to prevent potential arc flash or grounding hazards.
+
+Isolate the machine from the main grid using the wall-mounted breaker.
+
+Maintenance engineers must perform a continuity check on the inverter fuses.
+
+Do not restart the machine until the factory floor voltage has been verified as stable by the electrical team.

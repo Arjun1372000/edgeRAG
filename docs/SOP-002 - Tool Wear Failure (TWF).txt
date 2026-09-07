@@ -1,0 +1,17 @@
+Title: Routine and Emergency Tool Replacement Guidelines
+Applies To: Drill Bits, Milling Cutters, and Lathe Inserts
+Symptoms:
+
+Tool Wear metric exceeds 200 minutes of continuous operation.
+
+Gradual, unexplained increases in Torque required to maintain Rotational Speed.
+Root Cause: Physical degradation, dulling, or micro-fracturing of the cutting implement due to prolonged material friction.
+Immediate Mitigation Steps:
+
+Halt the current feed cycle and retract the tool arm from the material.
+
+Lock the spindle and initiate the automated tool-release sequence.
+
+Inspect the chuck for metal shavings or debris before inserting the replacement tool.
+
+Reset the Tool Wear timer to 0 in the edge monitoring system before resuming the batch.

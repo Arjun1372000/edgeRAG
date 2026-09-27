@@ -1,14 +1,14 @@
 DOCUMENT ID: SOP-005
-TITLE: Random Failure (RNF) Investigation and Escalation Procedure
+TITLE: General Procedure for Unclassified or Random Failure Events
 FAILURE CODE: RNF
-APPLIES TO: Automated assembly and machining equipment
-SEVERITY: Variable; assess from machine condition and safety impact
+APPLIES TO: Automated assembly and CNC machine systems
+SEVERITY: High
 
 1. PURPOSE
-Provide a controlled procedure for handling a Random Failure (RNF) condition when the machine reports a failure but the available sensor patterns do not clearly match the documented HDF, TWF, PWF, or OSF conditions.
+Provide a controlled response when telemetry indicates a machine failure but the observed pattern does not confidently match an established failure procedure.
 
 2. FAILURE DESCRIPTION
-RNF is treated as an unresolved or non-specific failure condition. It should not be assumed to have a single physical root cause. The primary objective is to place the machine in a safe state, collect evidence, and determine whether another documented failure mode explains the event.
+RNF is treated as an unclassified or intermittent failure condition. The available telemetry may be incomplete, inconsistent, transient, or insufficient to establish a specific failure mechanism.
 
 3. SYMPTOMS / TRIGGER CONDITIONS
 - Machine failure is reported without a clear match to the documented HDF, TWF, PWF, or OSF indicators.
@@ -25,9 +25,8 @@ RNF is treated as an unresolved or non-specific failure condition. It should not
 5. IMMEDIATE MITIGATION
 1. Place the machine in the safest available operating state appropriate to the observed condition.
 2. Stop the active process when continued operation could create equipment or personnel risk.
-3. Record the timestamp and most recent sensor values.
-4. Check whether the observed values match any documented HDF, TWF, PWF, or OSF trigger conditions.
-5. Escalate for engineering investigation when no documented failure mode can explain the event.
+3. Record the timestamp and most recent telemetry values.
+4. Avoid repeated uncontrolled restarts while the cause remains unknown.
 
 6. DIAGNOSTIC CHECKS
 - Review recent Torque, Rotational Speed, Tool Wear, Air Temperature, and Process Temperature values.
@@ -43,10 +42,7 @@ Escalate when the failure repeats, safety impact is uncertain, telemetry is inco
 Restart only after the machine has been assessed by the responsible operator or maintenance team and no unresolved safety-critical condition remains.
 
 9. SAFETY NOTES
-RNF should not be used as a reason to bypass safety controls. When the underlying condition is unknown, use the machine-specific safe-state and escalation procedure.
+When the cause cannot be established, use the safest approved operating state and escalate rather than assuming that an unclassified condition is harmless.
 
 10. RELATED PARAMETERS
-Torque, Rotational Speed, Tool Wear, Air Temperature, Process Temperature, machine state, alarm history, telemetry completeness.
-
-11. RETRIEVAL / DIAGNOSTIC NOTE
-This SOP is intentionally broader than the specific fault SOPs. When a query contains a recognizable HDF, TWF, PWF, or OSF signature, the corresponding failure-specific SOP should be preferred over RNF.
+All available machine telemetry, alarms, machine-state indicators, and operator observations.

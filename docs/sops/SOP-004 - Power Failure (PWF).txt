@@ -43,4 +43,4 @@ Do not restart the machine until the factory floor voltage has been verified as 
 Electrical isolation and diagnostics must be performed only by authorized, qualified personnel using applicable lockout/tagout and electrical-safety procedures. Do not open energized electrical equipment.
 
 10. RELATED PARAMETERS
-Torque, Rotational Speed, calculated Power, line voltage, electrical protection state, inverter-fuse state.
+Torque, Rotational Speed, inferred Power, inverter state, voltage status, electrical protection state.

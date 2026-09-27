@@ -1,0 +1,21 @@
+DOCUMENT ID: SAF-004
+TITLE: Telemetry Integrity and Sensor Plausibility Checks
+APPLIES TO: Machine monitoring and edge telemetry systems
+SEVERITY: Medium
+RELATED FAILURE CODES: RNF, HDF, PWF, OSF
+
+1. PURPOSE
+Ensure that maintenance decisions are based on plausible and complete sensor information.
+
+2. CHECKS
+- Verify timestamps are current and increasing.
+- Look for missing or frozen signals.
+- Compare related parameters for plausible relationships.
+- Flag abrupt impossible jumps for investigation.
+- Confirm that sensor connectivity is stable.
+
+3. DECISION
+Do not treat an isolated implausible sensor value as confirmed evidence of mechanical or electrical failure without corroborating signals.
+
+4. RECORD
+Retain the sensor state and telemetry-health status when a failure report is generated.

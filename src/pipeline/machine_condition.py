@@ -59,30 +59,95 @@ class MachineConditionBuilder:
     ) -> str:
 
         diagnosis = prediction["diagnosis"]
+        failure_probability = prediction[
+            "failure_probability"
+        ]
 
-        failure_probability = (
-            prediction["failure_probability"]
-        )
+        query_parts = [
+            "Industrial machine maintenance event.",
+            (
+                f"Machine failure probability is "
+                f"{failure_probability:.2f}."
+            ),
+        ]
 
-        query = (
-            "Industrial machine maintenance event. "
-            f"Machine failure probability is "
-            f"{failure_probability:.2f}. "
-        )
-
-        if diagnosis != "NORMAL":
-            query += (
-                f"Detected condition: {diagnosis}. "
+        if diagnosis not in {
+            "NORMAL",
+            "UNKNOWN",
+            "UNCLASSIFIED_FAILURE",
+        }:
+            query_parts.append(
+                f"Detected condition: {diagnosis}."
+            )
+        else:
+            query_parts.append(
+                f"Detected condition: {diagnosis}."
             )
 
-        query += (
-            "Retrieve relevant maintenance procedures, "
-            "diagnostic checks, mitigation actions, "
-            "safety requirements, escalation conditions, "
-            "and restart requirements. "
-        )
+        if diagnosis == "PWF":
 
-        query += (
+            power_proxy = (
+                sensor_data["Rotational speed [rpm]"]
+                * sensor_data["Torque [Nm]"]
+            )
+
+            query_parts.append(
+                "Inferred power proxy from "
+                "Torque × Rotational Speed is "
+                f"{power_proxy:.1f}."
+            )
+
+            query_parts.append(
+                "Prioritize evidence related to "
+                "power delivery, electrical diagnostics, "
+                "electrical isolation, inverter faults, "
+                "mitigation, escalation, and controlled restart."
+            )
+
+        elif diagnosis == "HDF":
+
+            temperature_delta = (
+                sensor_data["Process temperature [K]"]
+                - sensor_data["Air temperature [K]"]
+            )
+
+            query_parts.append(
+                f"Process-to-air temperature difference "
+                f"is {temperature_delta:.1f} K."
+            )
+
+            query_parts.append(
+                "Prioritize evidence related to "
+                "cooling, thermal diagnostics, ventilation, "
+                "mitigation, escalation, and restart."
+            )
+
+        elif diagnosis == "TWF":
+
+            query_parts.append(
+                "Prioritize evidence related to "
+                "tool wear, tool inspection, tool replacement, "
+                "torque trends, spindle safety, and restart."
+            )
+
+        elif diagnosis == "OSF":
+
+            query_parts.append(
+                "Prioritize evidence related to "
+                "mechanical overstrain, torque spikes, "
+                "binding, workpiece inspection, safety, "
+                "and controlled restart."
+            )
+
+        else:
+
+            query_parts.append(
+                "Retrieve general failure investigation, "
+                "diagnostic, safety, mitigation, escalation, "
+                "and restart evidence."
+            )
+
+        query_parts.append(
             "Observed machine parameters: "
             f"air temperature "
             f"{sensor_data['Air temperature [K]']} K, "
@@ -96,4 +161,4 @@ class MachineConditionBuilder:
             f"{sensor_data['Tool wear [min]']} minutes."
         )
 
-        return query
+        return " ".join(query_parts)

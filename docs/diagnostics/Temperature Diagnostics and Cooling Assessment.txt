@@ -1,0 +1,29 @@
+DOCUMENT ID: DIA-001
+TITLE: Temperature Diagnostics and Cooling System Assessment
+APPLIES TO: CNC milling and automated assembly motors
+SEVERITY: High
+RELATED FAILURE CODES: HDF, RNF
+
+1. PURPOSE
+Provide a diagnostic sequence for abnormal temperature behavior before selecting a maintenance action.
+
+2. NORMAL OBSERVATION
+Review Air Temperature and Process Temperature together. A sustained increase in Process Temperature under otherwise stable operating conditions can indicate inadequate heat removal.
+
+3. DIAGNOSTIC SEQUENCE
+1. Confirm that both temperature readings are changing plausibly.
+2. Compare the Process Temperature against the machine operating envelope.
+3. Check whether temperature continues increasing under load.
+4. Confirm that the primary cooling pump is running.
+5. Check secondary or backup cooling availability.
+6. Inspect ventilation paths and exhaust openings.
+7. Review whether the machine recently experienced an abnormal load or speed condition.
+
+4. INTERPRETATION
+A Process Temperature above 310 K combined with continued thermal rise should be investigated against SOP-001. A temperature sensor that disagrees sharply with other telemetry should be treated as a possible instrumentation issue.
+
+5. ESCALATION
+Escalate when temperature cannot be stabilized, sensor readings are inconsistent, or cooling hardware shows evidence of failure.
+
+6. REQUIRED RECORDS
+Record timestamp, Air Temperature, Process Temperature, rotational speed, operating load, pump state, and observations made during inspection.

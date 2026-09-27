@@ -1,0 +1,26 @@
+DOCUMENT ID: RST-001
+TITLE: Controlled Machine Restart and Return-to-Service Procedure
+APPLIES TO: Automated assembly and CNC machine systems
+SEVERITY: High
+RELATED FAILURE CODES: HDF, TWF, PWF, OSF, RNF
+
+1. PURPOSE
+Define a generic sequence for returning a machine to service after a maintenance or failure event.
+
+2. PRE-RESTART CONDITIONS
+- Failure cause or disposition has been recorded.
+- Required maintenance has been completed.
+- Guards and safety controls are restored.
+- No unresolved safety-critical alarm remains.
+- Relevant sensor values are plausible.
+
+3. CONTROLLED RESTART
+1. Clear the work area.
+2. Verify personnel are in safe positions.
+3. Restore energy according to the approved site procedure.
+4. Start at a controlled operating state.
+5. Observe temperature, torque, RPM, tool wear, and relevant alarms.
+6. Increase operating load only after stable behavior is confirmed.
+
+4. FAILURE TO STABILIZE
+If abnormal behavior returns, stop the restart sequence and escalate rather than repeatedly cycling the machine.

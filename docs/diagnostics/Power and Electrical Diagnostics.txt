@@ -1,0 +1,25 @@
+DOCUMENT ID: DIA-003
+TITLE: Power Delivery and Electrical Fault Diagnostics
+APPLIES TO: Machine drives, inverter systems, and factory electrical supply
+SEVERITY: Critical
+RELATED FAILURE CODES: PWF, RNF
+
+1. PURPOSE
+Provide an electrical diagnostic sequence for abnormal inferred power or machine power delivery.
+
+2. POWER CHECK
+Calculate or verify inferred machine power using Torque × Rotational Speed according to the system's configured units. Values below 3500 W or above 9000 W should be investigated against the applicable failure procedure.
+
+3. DIAGNOSTIC SEQUENCE
+1. Verify current Torque and Rotational Speed readings.
+2. Confirm that the readings are plausible and current.
+3. Review machine electrical alarm indicators.
+4. Check the state of electrical protection devices.
+5. Inspect inverter-fuse condition through the approved maintenance process.
+6. Determine whether a phase-loss or supply-voltage issue is suspected.
+
+4. DECISION GUIDANCE
+When the machine exhibits a confirmed electrical anomaly, use SOP-004 and the electrical isolation procedure. Do not diagnose an energized fault by exposing maintenance personnel to live equipment.
+
+5. ESCALATION
+Electrical diagnosis must be escalated to qualified personnel when factory supply, inverter, fuse, or motor electrical integrity is involved.

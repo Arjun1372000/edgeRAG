@@ -1,0 +1,24 @@
+DOCUMENT ID: MNT-002
+TITLE: Tool Replacement and Spindle Care Guide
+APPLIES TO: Cutting tools, tool holders, spindles, and chucks
+SEVERITY: High
+RELATED FAILURE CODES: TWF, OSF
+
+1. PURPOSE
+Provide supporting maintenance guidance for tools and spindle assemblies.
+
+2. REPLACEMENT WORKFLOW
+1. Stop the feed cycle.
+2. Isolate the spindle using the approved procedure.
+3. Release the tool.
+4. Inspect the removed tool.
+5. Inspect the holder and chuck.
+6. Install the correct replacement.
+7. Verify secure retention.
+8. Reset the tool-wear record.
+
+3. QUALITY CHECKS
+Look for abnormal wear patterns, fracture, contamination, runout indications, and repeated early wear.
+
+4. ESCALATION
+Escalate when a replacement tool immediately exhibits abnormal wear or when the holder/spindle interface is damaged.

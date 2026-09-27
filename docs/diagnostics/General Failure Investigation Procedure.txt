@@ -1,0 +1,27 @@
+DOCUMENT ID: DIA-005
+TITLE: General Failure Investigation and Telemetry Verification
+APPLIES TO: Automated assembly and CNC machine systems
+SEVERITY: High
+RELATED FAILURE CODES: RNF
+
+1. PURPOSE
+Provide a general investigation path when an event does not confidently match a known failure signature.
+
+2. FIRST CHECKS
+1. Confirm the machine has entered a failure or abnormal state.
+2. Capture the latest sensor snapshot.
+3. Review recent trends rather than relying on a single point.
+4. Review machine alarms and operator observations.
+5. Check telemetry completeness and timestamp continuity.
+
+3. CROSS-SIGNAL CHECKS
+Compare temperature, torque, rotational speed, tool wear, and inferred power. Look for combinations that point toward HDF, TWF, PWF, or OSF.
+
+4. UNKNOWN CONDITION
+If no known signature is sufficiently supported, classify the event as unclassified and escalate according to site procedure.
+
+5. REQUIRED EVIDENCE
+Preserve the timestamp, recent sensor window, alarms, maintenance actions already performed, and observed machine state.
+
+6. SAFETY
+When the cause cannot be determined, do not assume that continued operation or repeated restart is safe.

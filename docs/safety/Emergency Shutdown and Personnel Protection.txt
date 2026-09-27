@@ -1,0 +1,23 @@
+DOCUMENT ID: SAF-002
+TITLE: Emergency Shutdown and Personnel Protection Guidance
+APPLIES TO: Automated assembly and CNC machine systems
+SEVERITY: Critical
+RELATED FAILURE CODES: HDF, OSF, PWF, RNF
+
+1. PURPOSE
+Provide generic personnel-protection guidance when an abnormal machine condition creates immediate equipment or safety risk.
+
+2. IMMEDIATE PRIORITY
+Personnel safety takes precedence over production continuity.
+
+3. APPLY EMERGENCY RESPONSE WHEN
+- A machine condition is rapidly worsening.
+- Continued motion creates a credible personnel hazard.
+- Electrical hazards are suspected.
+- The approved SOP explicitly requires emergency isolation.
+
+4. RESPONSE
+Use the machine's approved emergency stop or isolation mechanism as appropriate to the situation. Keep personnel outside hazardous zones and follow site emergency procedures.
+
+5. POST-EVENT
+Record the event, preserve telemetry if possible without entering an unsafe area, and escalate to the responsible maintenance/safety team.

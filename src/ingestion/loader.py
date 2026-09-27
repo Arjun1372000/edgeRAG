@@ -22,6 +22,7 @@ def extract_metadata(
         "failure_code": r"FAILURE CODE:\s*(.+)",
         "applies_to": r"APPLIES TO:\s*(.+)",
         "severity": r"SEVERITY:\s*(.+)",
+        "related_failure_codes": r"RELATED FAILURE CODES:\s*(.+)",
     }
 
     for key, pattern in patterns.items():
@@ -32,13 +33,57 @@ def extract_metadata(
         )
 
         if match:
-            metadata[key] = match.group(1).strip()
+            value = match.group(1).strip()
+
+            if key == "related_failure_codes":
+                codes = [
+                    code.strip().upper()
+                    for code in value.split(",")
+                    if code.strip()
+                ]
+
+                metadata[key] = ",".join(codes)
+            else:
+                metadata[key] = value
+
+    # ---------------------------------------------------------
+    # Document type from directory structure
+    # ---------------------------------------------------------
+
+    parent_folder = file_path.parent.name.lower()
+
+    document_type_map = {
+        "sops": "sop",
+        "diagnostics": "diagnostics",
+        "safety": "safety",
+        "maintenance": "maintenance",
+        "restart": "restart",
+    }
 
     metadata["document_type"] = (
-        "SOP"
-        if file_path.name.upper().startswith("SOP-")
-        else "GENERAL"
+        document_type_map.get(
+            parent_folder,
+            "general",
+        )
     )
+
+    # ---------------------------------------------------------
+    # Normalize failure-code metadata
+    # ---------------------------------------------------------
+
+    if "failure_code" in metadata:
+        metadata["failure_code"] = (
+            metadata["failure_code"]
+            .strip()
+            .upper()
+        )
+
+        metadata["related_failure_codes"] = (
+            metadata["failure_code"]
+        )
+
+    elif "related_failure_codes" not in metadata:
+        metadata["related_failure_codes"] = ""
 
     return metadata
 
@@ -47,6 +92,7 @@ def load_documents(
     documents_path: str,
     extensions: list[str],
 ) -> list[Document]:
+
     path = Path(documents_path)
 
     if not path.exists():
@@ -57,6 +103,7 @@ def load_documents(
     documents = []
 
     for file_path in sorted(path.rglob("*")):
+
         if not file_path.is_file():
             continue
 
@@ -82,7 +129,9 @@ def load_documents(
                 )
             )
 
-        documents.extend(loaded_documents)
+        documents.extend(
+            loaded_documents
+        )
 
     if not documents:
         raise ValueError(

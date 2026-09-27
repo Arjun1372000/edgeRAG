@@ -1,0 +1,26 @@
+DOCUMENT ID: DIA-004
+TITLE: Tool Condition, Wear, and Replacement Diagnostics
+APPLIES TO: Drill bits, milling cutters, and lathe inserts
+SEVERITY: High
+RELATED FAILURE CODES: TWF, OSF
+
+1. PURPOSE
+Provide a structured method for assessing whether tool wear is contributing to machine abnormalities.
+
+2. INDICATORS
+- Tool Wear above 200 minutes requires inspection and consideration of replacement.
+- Gradual torque increase may accompany a dull or damaged tool.
+- Visible edge damage, micro-fractures, or abnormal shavings require tool inspection.
+
+3. DIAGNOSTIC SEQUENCE
+1. Read the current Tool Wear value.
+2. Review torque trend over the current cutting cycle.
+3. Inspect the cutting edge when the machine is safely isolated.
+4. Inspect the tool holder and chuck.
+5. Confirm the installed tool matches the production batch specification.
+
+4. INTERPRETATION
+High tool wear with gradual torque increase favors TWF. High tool wear combined with sudden torque spikes and RPM collapse may instead indicate OSF.
+
+5. RESTART
+After tool replacement, verify secure installation, clear the spindle/tool assembly, and reset the tool-wear timer according to the approved procedure.

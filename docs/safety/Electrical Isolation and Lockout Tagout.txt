@@ -1,0 +1,25 @@
+DOCUMENT ID: SAF-001
+TITLE: Electrical Isolation and Lockout/Tagout Procedure
+APPLIES TO: Industrial machine electrical systems
+SEVERITY: Critical
+RELATED FAILURE CODES: PWF, HDF, OSF
+
+1. PURPOSE
+Provide a generic site-level reference for safely isolating machinery before electrical or mechanical maintenance.
+
+2. WHEN TO APPLY
+Apply whenever inspection requires access to energized or potentially energized equipment, or when an electrical fault is suspected.
+
+3. BASIC SEQUENCE
+1. Stop the machine using the approved control method when conditions permit.
+2. Identify all energy sources relevant to the machine.
+3. Isolate the machine using the approved disconnect.
+4. Apply the site's lockout/tagout controls.
+5. Verify absence of hazardous energy using the site's approved method.
+6. Only authorized personnel may proceed with maintenance.
+
+4. IMPORTANT
+Do not open energized electrical equipment. Arc-flash, grounding, stored-energy, and unexpected-motion hazards must be assessed by qualified personnel.
+
+5. RELEASE
+Remove isolation controls only after maintenance is complete, guards are restored, personnel are clear, and the authorized person confirms readiness for controlled restart.

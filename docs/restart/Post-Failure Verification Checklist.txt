@@ -1,0 +1,27 @@
+DOCUMENT ID: RST-002
+TITLE: Post-Failure Verification and Restart Checklist
+APPLIES TO: Automated assembly and CNC machine systems
+SEVERITY: High
+RELATED FAILURE CODES: HDF, TWF, PWF, OSF, RNF
+
+1. PURPOSE
+Provide a post-maintenance checklist to support a controlled return to production.
+
+2. CHECKLIST
+- Confirm the documented failure mode or unclassified disposition.
+- Confirm corrective action has been recorded.
+- Verify relevant maintenance components.
+- Verify sensor readings are current and plausible.
+- Verify machine alarms are cleared or understood.
+- Verify guards/interlocks are functional.
+- Confirm the responsible operator or maintenance engineer authorizes restart.
+
+3. CONDITION-SPECIFIC VERIFICATION
+HDF: confirm thermal behavior stabilizes.
+TWF: confirm replacement tool and tool-wear state.
+PWF: confirm factory voltage and electrical fault clearance.
+OSF: confirm mechanical loading is normal.
+UNCLASSIFIED: confirm the failure is understood sufficiently for safe operation.
+
+4. ESCALATION
+Do not release the machine to full production when any required verification item fails.

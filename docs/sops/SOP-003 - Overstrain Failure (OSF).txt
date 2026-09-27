@@ -1,14 +1,14 @@
 DOCUMENT ID: SOP-003
-TITLE: Overstrain Failure (OSF) Detection and Motor Protection Procedure
+TITLE: Handling Torque Spikes and Motor Overstrain
 FAILURE CODE: OSF
-APPLIES TO: Primary drive motors
-SEVERITY: High
+APPLIES TO: Primary drive motors and mechanical workpiece interface
+SEVERITY: Critical
 
 1. PURPOSE
-Provide a standard response to torque overload and motor overstrain conditions in order to prevent continued mechanical or electrical stress.
+Provide an immediate response to abnormal mechanical loading that could damage the drive motor, tooling, or workpiece.
 
 2. FAILURE DESCRIPTION
-OSF is associated with excessive mechanical load on the drive system. A sustained or sudden torque increase can indicate tool binding, excessive material load, or another condition that prevents the motor from maintaining normal rotation.
+OSF is associated with excessive mechanical load, torque spikes, binding, or material conditions that exceed the machine's processing capability.
 
 3. SYMPTOMS / TRIGGER CONDITIONS
 - Sudden Torque spikes exceeding 60 Nm combined with elevated Tool Wear.
@@ -35,13 +35,13 @@ OSF is associated with excessive mechanical load on the drive system. A sustaine
 - Inspect for physical binding, obstruction, or mechanical resistance.
 
 7. ESCALATION CONDITION
-Escalate to maintenance engineering if the drive remains overloaded after the obstruction/load condition is removed, if abnormal mechanical resistance persists, or if motor protection has been triggered repeatedly.
+Escalate if the drive cannot be safely reset, if mechanical damage is suspected, or if abnormal torque returns after the obstruction is removed.
 
 8. RESTART CONDITIONS
-Verify that the source of overload has been removed and that the workpiece/material matches batch specifications before restarting the machine.
+Do not restart until the mechanical cause has been identified, the workpiece/tool interface has been inspected, and an authorized operator confirms safe conditions.
 
 9. SAFETY NOTES
-Do not enter the machine work area until the drive is stopped and all required isolation procedures have been completed. Never defeat motor-protection or guarding systems.
+Keep personnel clear of the work envelope during a hard-stop event. Use machine-specific guarding and lockout procedures before manual intervention.
 
 10. RELATED PARAMETERS
 Torque, Rotational Speed, Tool Wear, material specification, drive state.

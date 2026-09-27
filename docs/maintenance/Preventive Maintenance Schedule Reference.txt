@@ -1,0 +1,22 @@
+DOCUMENT ID: MNT-004
+TITLE: Preventive Maintenance Schedule Reference
+APPLIES TO: Automated assembly and CNC machine systems
+SEVERITY: Medium
+RELATED FAILURE CODES: HDF, TWF, PWF, OSF, RNF
+
+1. PURPOSE
+Provide a general reference for maintaining machine systems before failures occur.
+
+2. MAINTENANCE AREAS
+- Cooling system inspection.
+- Tool and spindle inspection.
+- Drive and mechanical interface inspection.
+- Electrical protection and inverter inspection.
+- Sensor and telemetry integrity review.
+- Safety guarding and interlock verification.
+
+3. CONDITION-BASED FOLLOW-UP
+Repeated alerts from the edge monitoring system should feed into maintenance planning even when each individual event does not require an emergency shutdown.
+
+4. RECORD KEEPING
+Maintenance history should record date, asset, observed condition, action taken, parts replaced, and restart verification.

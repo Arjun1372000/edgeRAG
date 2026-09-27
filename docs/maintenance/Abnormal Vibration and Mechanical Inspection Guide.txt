@@ -1,0 +1,21 @@
+DOCUMENT ID: MNT-005
+TITLE: Abnormal Vibration and Mechanical Inspection Guide
+APPLIES TO: Drive motors, spindles, tool holders, and workpiece interfaces
+SEVERITY: High
+RELATED FAILURE CODES: OSF, TWF, RNF
+
+1. PURPOSE
+Provide a supporting inspection path for abnormal mechanical behavior that may not be fully explained by torque alone.
+
+2. INSPECTION AREAS
+- Tool holder and chuck.
+- Spindle and drive interface.
+- Workpiece clamping.
+- Guards and mounts.
+- Visible signs of looseness, impact, or obstruction.
+
+3. RELATION TO OTHER SIGNALS
+Abnormal mechanical vibration combined with a torque spike or RPM drop should be investigated alongside OSF guidance.
+
+4. ESCALATION
+Escalate repeated abnormal vibration, suspected structural damage, or any condition that cannot be safely inspected during normal maintenance access.

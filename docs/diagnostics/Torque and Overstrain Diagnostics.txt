@@ -1,0 +1,27 @@
+DOCUMENT ID: DIA-002
+TITLE: Torque Trend and Mechanical Loading Diagnostics
+APPLIES TO: Primary drive motors, tooling, and workpiece interface
+SEVERITY: High
+RELATED FAILURE CODES: OSF, TWF, RNF
+
+1. PURPOSE
+Provide a diagnostic method for abnormal torque behavior and distinguish gradual tool degradation from sudden mechanical overstrain.
+
+2. INDICATORS
+- Gradual torque increase while maintaining rotational speed may indicate tool degradation.
+- A sudden torque spike above 60 Nm accompanied by a sharp RPM drop should be investigated as possible overstrain.
+- Persistent high torque after tool replacement requires further mechanical investigation.
+
+3. DIAGNOSTIC SEQUENCE
+1. Review the torque trend for the previous operating interval.
+2. Determine whether the torque rise was gradual or abrupt.
+3. Compare torque behavior with Rotational Speed.
+4. Check Tool Wear and recent tool-change history.
+5. Inspect the workpiece/tool interface for binding.
+6. Verify that the processed material matches the production specification.
+
+4. DECISION GUIDANCE
+Gradual torque growth with high Tool Wear favors investigation under SOP-002. Sudden torque spikes with rotational-speed collapse favor SOP-003. If neither pattern is clear, use the general investigation procedure.
+
+5. SAFETY
+Do not manually access the work envelope while motion can occur. Follow machine stop and isolation procedures before physical inspection.

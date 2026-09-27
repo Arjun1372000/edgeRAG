@@ -17,7 +17,15 @@ vectorstore:
   collection_name: "edge_rag"
 
 retrieval:
-  top_k: 4
+  top_k: 6
+  semantic_k: 15
+  fault_k: 6
+  max_chunks_per_source: 2
+
+  reranking:
+    fault_bonus: 0.12
+    document_type_bonus: 0.03
+    severity_bonus: 0.02
 
 model:
   artifacts_path: "./models"
@@ -34,4 +42,9 @@ decision:
   threshold_beta: 2.0
   critical_threshold: 0.80
   primary_fault_min_probability: 0.35
-  
+
+llm:
+  provider: "ollama"
+  model: "llama3.2:1b"
+  temperature: 0.1
+  num_predict: 600

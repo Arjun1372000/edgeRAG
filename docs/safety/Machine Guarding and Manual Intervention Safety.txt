@@ -1,0 +1,20 @@
+DOCUMENT ID: SAF-003
+TITLE: Machine Guarding and Manual Intervention Safety
+APPLIES TO: CNC machines, cutting tools, drive systems
+SEVERITY: High
+RELATED FAILURE CODES: TWF, OSF
+
+1. PURPOSE
+Define general precautions for inspection and manual intervention around moving machinery.
+
+2. RULES
+- Do not enter the work envelope while motion is possible.
+- Use the approved stop and isolation sequence before manual inspection.
+- Do not attempt to remove a bound workpiece under machine power.
+- Restore guards and interlocks before controlled restart.
+
+3. TOOL CHANGE
+Use the approved spindle lock and tool-release procedure. Confirm the machine cannot unexpectedly move before entering the cutting area.
+
+4. ESCALATION
+Any damaged guard, interlock, spindle lock, or mechanical release system must be escalated before restart.

@@ -1,0 +1,24 @@
+DOCUMENT ID: MNT-001
+TITLE: Cooling System Maintenance and Inspection Guide
+APPLIES TO: CNC milling and automated assembly motors
+SEVERITY: High
+RELATED FAILURE CODES: HDF
+
+1. PURPOSE
+Provide routine maintenance checks for cooling components that influence machine thermal behavior.
+
+2. ROUTINE CHECKS
+- Inspect coolant circulation paths for restriction.
+- Verify primary and backup pump operation.
+- Inspect ventilation fans and exhaust paths.
+- Check for visible leaks or abnormal pump noise.
+- Verify temperature sensors are physically secure.
+
+3. AFTER HDF EVENT
+Inspect the cooling system before returning the machine to full load. Record the observed temperature behavior before and after corrective action.
+
+4. MAINTENANCE INTERVAL
+Use the site's configured maintenance schedule. Any interval stated here is a reference for the application and must be adapted to the actual machine manufacturer requirements.
+
+5. FAILURE INDICATIONS
+Repeated temperature excursions after maintenance should be escalated rather than treated as normal operating variation.

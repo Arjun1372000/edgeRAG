@@ -1,17 +1,47 @@
-Title: Mitigation Protocol for Heat Dissipation Anomalies
-Applies To: CNC Milling and Assembly Motors
-Symptoms:
+DOCUMENT ID: SOP-001
+TITLE: Heat Dissipation Failure (HDF) Mitigation and Response Procedure
+FAILURE CODE: HDF
+APPLIES TO: CNC milling and automated assembly motors
+SEVERITY: High
 
-Air Temperature and Process Temperature differential falls below critical thresholds.
+1. PURPOSE
+Provide a standard procedure for identifying, containing, and recovering from a Heat Dissipation Failure (HDF) condition.
 
-Sustained Process Temperature exceeding 310 K.
-Root Cause: Failure of the internal liquid cooling system or blocked ventilation fans, leading to thermal expansion and motor stall.
-Immediate Mitigation Steps:
+2. FAILURE DESCRIPTION
+HDF is associated with abnormal thermal buildup in the machine. The condition may indicate inadequate cooling or restricted heat removal and can lead to thermal expansion, reduced motor performance, or motor stall.
 
-Do not power down immediately; reduce rotational speed to idle (below 1000 RPM) to allow residual cooling.
+3. SYMPTOMS / TRIGGER CONDITIONS
+- Air Temperature and Process Temperature differential falls below critical thresholds.
+- Sustained Process Temperature exceeds 310 K.
+- Temperature continues to increase while the machine remains under load.
+- Machine performance may become unstable as thermal conditions worsen.
 
-Engage the secondary backup coolant pump manually.
+4. LIKELY ROOT CAUSES
+- Failure of the internal liquid cooling system.
+- Blocked or restricted ventilation fans / exhaust vents.
+- Reduced coolant circulation or failure of the secondary cooling path.
 
-Check the thermal exhaust vents for physical blockages.
+5. IMMEDIATE MITIGATION
+1. Do not power down immediately; reduce rotational speed to idle (below 1000 RPM) to allow residual cooling.
+2. Engage the secondary backup coolant pump manually.
+3. Check thermal exhaust vents for physical blockages.
+4. Continue monitoring Process Temperature after mitigation is applied.
 
-If Process Temperature does not drop within 2 minutes, trigger an emergency electrical disconnect.
+6. ESCALATION / EMERGENCY CONDITION
+If Process Temperature does not drop within 2 minutes after mitigation, trigger an emergency electrical disconnect according to site safety procedure.
+
+7. DIAGNOSTIC CHECKS
+- Verify Process Temperature and Air Temperature readings.
+- Confirm cooling-pump operation.
+- Inspect coolant circulation path for interruption.
+- Inspect ventilation and exhaust areas for blockage.
+- Confirm that the temperature sensor is providing plausible readings.
+
+8. RESTART CONDITIONS
+Do not return the machine to normal operating load until the thermal condition has stabilized and the cooling system has been checked.
+
+9. SAFETY NOTES
+Follow site lockout/tagout and electrical-safety procedures when inspecting or isolating equipment. Emergency electrical isolation should be performed only by authorized personnel.
+
+10. RELATED PARAMETERS
+Process Temperature, Air Temperature, rotational speed, cooling-pump state, ventilation state.

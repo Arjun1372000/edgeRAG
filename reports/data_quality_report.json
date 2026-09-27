@@ -1,0 +1,242 @@
+{
+  "rows_total": 10000,
+  "columns_total": 14,
+  "missing_values": {},
+  "duplicate_rows": 0,
+  "invalid_type_rows": 0,
+  "invalid_numeric_rows": 0,
+  "invalid_binary_label_rows": 0,
+  "label_inconsistency_rows": 27,
+  "label_inconsistency_examples": [
+    {
+      "index": 1221,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 1302,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 1437,
+      "machine_failure": 1,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0
+      }
+    },
+    {
+      "index": 1748,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 2072,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 2559,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 2749,
+      "machine_failure": 1,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0
+      }
+    },
+    {
+      "index": 3065,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 3452,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 4044,
+      "machine_failure": 1,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0
+      }
+    },
+    {
+      "index": 4684,
+      "machine_failure": 1,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0
+      }
+    },
+    {
+      "index": 5471,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 5489,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 5495,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 5509,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 5536,
+      "machine_failure": 1,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0
+      }
+    },
+    {
+      "index": 5553,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 5639,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    },
+    {
+      "index": 5941,
+      "machine_failure": 1,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 0
+      }
+    },
+    {
+      "index": 6091,
+      "machine_failure": 0,
+      "faults": {
+        "TWF": 0,
+        "HDF": 0,
+        "PWF": 0,
+        "OSF": 0,
+        "RNF": 1
+      }
+    }
+  ],
+  "fault_counts": {
+    "TWF": 46,
+    "HDF": 115,
+    "PWF": 95,
+    "OSF": 98,
+    "RNF": 19
+  },
+  "machine_failure_count": 339,
+  "rows_excluded_from_training": 27,
+  "rows_used_for_training": 9973
+}

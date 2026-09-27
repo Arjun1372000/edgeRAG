@@ -1,0 +1,37 @@
+documents:
+  path: "./docs"
+  extensions:
+    - ".txt"
+
+embedding:
+  provider: "ollama"
+  model: "nomic-embed-text"
+
+chunking:
+  chunk_size: 800
+  chunk_overlap: 120
+
+vectorstore:
+  provider: "chroma"
+  path: "./vectorstore"
+  collection_name: "edge_rag"
+
+retrieval:
+  top_k: 4
+
+model:
+  artifacts_path: "./models"
+  random_state: 42
+  n_estimators: 200
+  test_size: 0.15
+  validation_size: 0.15
+
+validation:
+  exclude_inconsistent_labels: true
+
+decision:
+  threshold_metric: "f2"
+  threshold_beta: 2.0
+  critical_threshold: 0.80
+  primary_fault_min_probability: 0.35
+  

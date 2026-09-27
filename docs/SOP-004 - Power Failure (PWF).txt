@@ -1,15 +1,46 @@
-Title: Power Delivery and Voltage Anomaly Protocols
-Applies To: Factory Electrical Grid and Machine Power Supplies
-Symptoms:
+DOCUMENT ID: SOP-004
+TITLE: Power Delivery and Voltage Anomaly Response Procedure
+FAILURE CODE: PWF
+APPLIES TO: Factory electrical grid and machine power supplies
+SEVERITY: Critical
 
-The product of Torque and Rotational Speed (Power) drops below 3500 W or spikes critically above 9000 W.
-Root Cause: Phase loss in the main factory power supply, blown inverter fuses, or motor short circuits.
-Immediate Mitigation Steps:
+1. PURPOSE
+Provide a standard response to abnormal machine power delivery and voltage conditions while minimizing electrical and equipment hazards.
 
-Step away from the machine casing to prevent potential arc flash or grounding hazards.
+2. FAILURE DESCRIPTION
+PWF is associated with abnormal electrical power delivery to the machine. Power can be inferred from Torque × Rotational Speed and may become abnormally low or critically high during an electrical fault.
 
-Isolate the machine from the main grid using the wall-mounted breaker.
+3. SYMPTOMS / TRIGGER CONDITIONS
+- The product of Torque and Rotational Speed (Power) drops below 3500 W.
+- Power spikes critically above 9000 W.
+- Machine operation may become unstable or stop unexpectedly.
+- Electrical protection devices may indicate a fault condition.
 
-Maintenance engineers must perform a continuity check on the inverter fuses.
+4. LIKELY ROOT CAUSES
+- Phase loss in the main factory power supply.
+- Blown inverter fuses.
+- Motor short circuits.
+- Other abnormal conditions in the machine power-delivery path.
 
-Do not restart the machine until the factory floor voltage has been verified as stable by the electrical team.
+5. IMMEDIATE MITIGATION
+1. Step away from the machine casing to prevent potential arc-flash or grounding hazards.
+2. Isolate the machine from the main grid using the wall-mounted breaker.
+3. Prevent restart while the electrical fault is being investigated.
+
+6. DIAGNOSTIC CHECKS
+- Verify machine power and rotational-speed readings.
+- Check the state of electrical protection devices.
+- Maintenance engineers should perform a continuity check on inverter fuses.
+- Inspect available electrical-fault indicators according to site procedure.
+
+7. ESCALATION CONDITION
+Escalate to qualified electrical maintenance personnel for suspected phase loss, inverter-fuse failure, motor short circuit, or any condition involving the factory electrical supply.
+
+8. RESTART CONDITIONS
+Do not restart the machine until the factory floor voltage has been verified as stable by the electrical team and the identified fault has been cleared.
+
+9. SAFETY NOTES
+Electrical isolation and diagnostics must be performed only by authorized, qualified personnel using applicable lockout/tagout and electrical-safety procedures. Do not open energized electrical equipment.
+
+10. RELATED PARAMETERS
+Torque, Rotational Speed, calculated Power, line voltage, electrical protection state, inverter-fuse state.

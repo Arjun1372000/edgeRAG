@@ -1,17 +1,48 @@
-Title: Routine and Emergency Tool Replacement Guidelines
-Applies To: Drill Bits, Milling Cutters, and Lathe Inserts
-Symptoms:
+DOCUMENT ID: SOP-002
+TITLE: Tool Wear Failure (TWF) Detection and Tool Replacement Procedure
+FAILURE CODE: TWF
+APPLIES TO: Drill bits, milling cutters, and lathe inserts
+SEVERITY: Medium to High
 
-Tool Wear metric exceeds 200 minutes of continuous operation.
+1. PURPOSE
+Provide a standard procedure for identifying excessive tool wear, safely removing the worn tool, and preparing the machine for continued operation.
 
-Gradual, unexplained increases in Torque required to maintain Rotational Speed.
-Root Cause: Physical degradation, dulling, or micro-fracturing of the cutting implement due to prolonged material friction.
-Immediate Mitigation Steps:
+2. FAILURE DESCRIPTION
+TWF occurs when the cutting implement has degraded sufficiently that normal machining performance can no longer be maintained reliably. Progressive wear may increase torque demand and reduce process stability.
 
-Halt the current feed cycle and retract the tool arm from the material.
+3. SYMPTOMS / TRIGGER CONDITIONS
+- Tool Wear metric exceeds 200 minutes of continuous operation.
+- Gradual, unexplained increases in Torque are required to maintain Rotational Speed.
+- Cutting performance may deteriorate as the tool becomes dull or damaged.
+- Metal shavings or visible tool damage may be present during inspection.
 
-Lock the spindle and initiate the automated tool-release sequence.
+4. LIKELY ROOT CAUSES
+- Physical degradation from prolonged material friction.
+- Dulling of the cutting edge.
+- Micro-fracturing or other physical damage to the cutting implement.
+- Continued operation beyond the intended tool-wear interval.
 
-Inspect the chuck for metal shavings or debris before inserting the replacement tool.
+5. IMMEDIATE MITIGATION
+1. Halt the current feed cycle and retract the tool arm from the material.
+2. Lock the spindle and initiate the automated tool-release sequence.
+3. Inspect the chuck for metal shavings or debris before inserting the replacement tool.
+4. Replace the worn or damaged tool using the approved tool-change procedure.
+5. Reset the Tool Wear timer to 0 in the edge monitoring system before resuming the batch.
 
-Reset the Tool Wear timer to 0 in the edge monitoring system before resuming the batch.
+6. DIAGNOSTIC CHECKS
+- Review Tool Wear history and current timer value.
+- Check Torque trend against recent normal operation.
+- Visually inspect the cutting tool for dulling, chips, cracks, or micro-fractures.
+- Check the chuck and tool holder for debris or abnormal wear.
+
+7. ESCALATION CONDITION
+Escalate to maintenance engineering if excessive torque remains after tool replacement, if the replacement tool shows abnormal wear immediately, or if the tool holder/chuck is damaged.
+
+8. RESTART CONDITIONS
+Resume operation only after the replacement tool is securely installed, the spindle/tool assembly is cleared, and the Tool Wear timer has been reset.
+
+9. SAFETY NOTES
+Follow machine-specific tool-change, spindle-locking, and guarding procedures. Do not access the cutting zone while the machine is capable of unexpected movement.
+
+10. RELATED PARAMETERS
+Tool Wear, Torque, Rotational Speed, feed-cycle state, spindle state.

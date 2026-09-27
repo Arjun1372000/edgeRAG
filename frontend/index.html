@@ -2,96 +2,489 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edge RAG Failure Mitigation</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EdgeRAG — Maintenance Intelligence
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
 </head>
+
 <body>
-    <div class="dashboard-container">
-        <!-- Header -->
-        <header class="top-bar">
-            <div class="title-section">
-                <h1>Edge-Optimized RAG Operator Copilot</h1>
-                <p>Assembly Line Monitoring & Localized Mitigation</p>
+
+<div class="app-shell">
+
+    <header class="topbar">
+
+        <div>
+
+            <div class="eyebrow">
+                EDGE INTELLIGENCE
             </div>
-            <div class="status-bar">
-                <span class="badge status-active">● Edge CPU Inference Active</span>
-                <span class="badge">Model: Phi-3-Mini (GGUF)</span>
+
+            <h1>
+                EdgeRAG
+            </h1>
+
+            <p>
+                Local predictive-maintenance intelligence
+            </p>
+
+        </div>
+
+        <div class="status-pill">
+
+            <span class="status-dot"></span>
+
+            LOCAL SYSTEM
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero-grid">
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="section-label">
+                            MACHINE INPUT
+                        </div>
+
+                        <h2>
+                            Machine Condition
+                        </h2>
+
+                    </div>
+
+                    <span
+                        id="system-status"
+                        class="tag"
+                    >
+                        READY
+                    </span>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Machine Type
+
+                        <select id="type">
+
+                            <option value="L">
+                                L
+                            </option>
+
+                            <option
+                                value="M"
+                                selected
+                            >
+                                M
+                            </option>
+
+                            <option value="H">
+                                H
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+                        Air Temperature [K]
+
+                        <input
+                            id="air_temperature"
+                            type="number"
+                            step="0.1"
+                            value="298.9"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Process Temperature [K]
+
+                        <input
+                            id="process_temperature"
+                            type="number"
+                            step="0.1"
+                            value="309.1"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Rotational Speed [RPM]
+
+                        <input
+                            id="rotational_speed"
+                            type="number"
+                            step="1"
+                            value="2861"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Torque [Nm]
+
+                        <input
+                            id="torque"
+                            type="number"
+                            step="0.1"
+                            value="4.6"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Tool Wear [min]
+
+                        <input
+                            id="tool_wear"
+                            type="number"
+                            step="1"
+                            value="143"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <div class="actions">
+
+                    <button
+                        id="sample-btn"
+                        class="secondary-btn"
+                    >
+                        Load Failure Sample
+                    </button>
+
+
+                    <button
+                        id="analyze-btn"
+                        class="primary-btn"
+                    >
+                        Analyze Machine
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="error-box"
+                    class="error-box hidden"
+                ></div>
+
             </div>
-        </header>
 
-        <main class="dashboard-grid">
-            <!-- Left Panel: AI4I Sensor Telemetry -->
-            <section class="panel telemetry-panel">
-                <h2>Live Sensor Feed</h2>
-                <div class="sensor-grid">
-                    <div class="sensor-card">
-                        <span class="label">Air Temperature</span>
-                        <span class="value" id="val-air">298.1 K</span>
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="section-label">
+                            MODEL ASSESSMENT
+                        </div>
+
+                        <h2>
+                            Current Status
+                        </h2>
+
                     </div>
-                    <div class="sensor-card">
-                        <span class="label">Process Temperature</span>
-                        <span class="value" id="val-process">308.6 K</span>
+
+
+                    <div
+                        id="criticality"
+                        class="criticality normal"
+                    >
+                        NORMAL
                     </div>
-                    <div class="sensor-card">
-                        <span class="label">Rotational Speed</span>
-                        <span class="value" id="val-rpm">1551 RPM</span>
-                    </div>
-                    <div class="sensor-card">
-                        <span class="label">Torque</span>
-                        <span class="value alert-text" id="val-torque">65.2 Nm</span>
-                    </div>
-                    <div class="sensor-card">
-                        <span class="label">Tool Wear</span>
-                        <span class="value" id="val-wear">198 min</span>
-                    </div>
+
                 </div>
 
-                <!-- ML Diagnostic Output -->
-                <div class="diagnostic-box status-faulty mt-20">
-                    <h3>Machine Diagnosis: <span class="alert-text">FAILURE DETECTED</span></h3>
-                    <p><strong>Predicted Mode:</strong> OSF (Overstrain Failure)</p>
-                    <p><strong>Confidence:</strong> 94.2% (XGBoost)</p>
-                </div>
-            </section>
 
-            <!-- Right Panel: SLM / RAG Output -->
-            <section class="panel rag-panel">
-                <h2>RAG Mitigation Assistant</h2>
-                <div class="rag-chat-window">
-                    <div class="chat-message system">
-                        <strong>System Trigger:</strong> OSF Failure detected at Station 4. Querying vector database for mitigation protocols...
-                    </div>
-                    
-                    <div class="chat-message agent">
-                        <strong>Edge SLM (Streaming):</strong><br>
-                        <span id="rag-stream"></span><span class="cursor">|</span>
-                    </div>
-                </div>
-                
-                <div class="action-buttons">
-                    <button class="btn btn-primary">Acknowledge & Shut Down</button>
-                    <button class="btn btn-secondary">Request Maintenance Team</button>
-                </div>
-            </section>
-        </main>
-    </div>
+                <div class="diagnosis">
 
-    <!-- Script to simulate the SLM typing out a response -->
-    <script>
-        const ragResponse = "Based on the retrieved operational manual, an Overstrain Failure (OSF) coupled with a torque spike of 65.2 Nm indicates severe tool binding. \n\nRecommended Local Mitigation:\n1. Immediately halt the rotational drive to prevent motor burnout.\n2. Do not attempt to reverse the spindle.\n3. Manually release the tension chuck before replacing the tool bit.";
-        let charIndex = 0;
-        
-        function typeWriter() {
-            if (charIndex < ragResponse.length) {
-                document.getElementById("rag-stream").innerHTML += ragResponse.charAt(charIndex) === '\n' ? '<br>' : ragResponse.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, 15); // Simulates fast local SLM token streaming
-            }
-        }
-        
-        // Start the RAG streaming simulation after a short delay
-        setTimeout(typeWriter, 1000);
-    </script>
+                    <span>
+                        Diagnosis
+                    </span>
+
+                    <strong id="diagnosis">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="probability">
+
+                    <div class="probability-head">
+
+                        <span>
+                            Failure Probability
+                        </span>
+
+                        <strong
+                            id="failure-probability"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="meter">
+
+                        <div
+                            id="probability-bar"
+                            class="meter-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sensor-cards">
+
+                    <div class="sensor-card">
+
+                        <span>
+                            Air Temp
+                        </span>
+
+                        <strong
+                            id="sensor-air"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="sensor-card">
+
+                        <span>
+                            Process Temp
+                        </span>
+
+                        <strong
+                            id="sensor-process"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="sensor-card">
+
+                        <span>
+                            RPM
+                        </span>
+
+                        <strong
+                            id="sensor-rpm"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="sensor-card">
+
+                        <span>
+                            Torque
+                        </span>
+
+                        <strong
+                            id="sensor-torque"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="sensor-card">
+
+                        <span>
+                            Tool Wear
+                        </span>
+
+                        <strong
+                            id="sensor-wear"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="two-column">
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="section-label">
+                            RETRIEVAL
+                        </div>
+
+                        <h2>
+                            Evidence
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        id="evidence-count"
+                        class="tag"
+                    >
+                        0 SOURCES
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="evidence-list"
+                    class="evidence-list"
+                >
+
+                    <div class="empty-state">
+
+                        Run an analysis to see
+                        retrieved maintenance evidence.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="section-label">
+                            FAULT MODEL
+                        </div>
+
+                        <h2>
+                            Fault Candidates
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="fault-list"
+                    class="fault-list"
+                >
+
+                    <div class="empty-state">
+
+                        No prediction yet.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <div class="section-label">
+                        EDGE GENERATION
+                    </div>
+
+                    <h2>
+                        Maintenance Report
+                    </h2>
+
+                </div>
+
+
+                <span class="tag">
+                    LOCAL SLM
+                </span>
+
+            </div>
+
+
+            <div
+                id="report"
+                class="report markdown-body"
+            >
+
+                <div class="empty-state">
+                    No report generated yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        EdgeRAG · Chroma · LangChain · Ollama · FastAPI
+    </footer>
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
 </body>
 </html>

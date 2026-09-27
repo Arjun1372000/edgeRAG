@@ -2,6 +2,8 @@
 
 **Python Version:** `3.12.10`
 
+**Dataset: "https://www.kaggle.com/datasets/stephanmatzka/predictive-maintenance-dataset-ai4i-2020"**
+
 Evaluations required due to being Edge deployable:
 
 * Retrieval quality

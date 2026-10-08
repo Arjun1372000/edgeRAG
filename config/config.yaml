@@ -45,6 +45,6 @@ decision:
 
 llm:
   provider: "ollama"
-  model: "llama3.2:1b"
+  model: "llama3.2"
   temperature: 0.1
   num_predict: 600
